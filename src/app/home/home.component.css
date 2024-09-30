@@ -1,0 +1,63 @@
+.card {
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+  }
+  
+  
+
+  .contenedorcard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+   
+
+  .card-header{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+  }
+
+  .card-img{
+    width: 250px;
+    height: 200px;
+  }
+
+  .card-descripcion{
+    width: 200px;
+    height: 300px;
+    text-align: center;
+  }
+
+  .card-botones{
+    width: 250px;
+    height: 150px;
+  }
+
+
+  .marca {
+    width: 150px;
+    height: 100;
+    margin: 10px;
+  } 
+  .contenedormarca{
+    display: flex; 
+    flex-wrap:wrap; 
+    align-items: center; 
+    justify-content: center; 
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  
+
+  .img-marca{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+  }

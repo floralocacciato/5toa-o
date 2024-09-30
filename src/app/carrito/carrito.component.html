@@ -1,0 +1,53 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="demo-position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let producto">{{ producto.id }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="demo-name">
+    <th mat-header-cell *matHeaderCellDef>Nombre</th>
+    <td mat-cell *matCellDef="let producto">{{ producto.nombre }}</td>
+  </ng-container>
+
+  <!-- Precio Column -->
+  <ng-container matColumnDef="demo-precio">
+    <th mat-header-cell *matHeaderCellDef>Precio</th>
+    <td mat-cell *matCellDef="let producto">{{ '€' + producto.precio.toFixed(2) }}</td>
+  </ng-container>
+
+  <!-- Subtotal Column -->
+  <ng-container matColumnDef="demo-subtotal">
+    <th mat-header-cell *matHeaderCellDef>Subtotal</th>
+    <td mat-cell *matCellDef="let producto">{{ '€' + producto.subtotal.toFixed(2) }}</td>
+  </ng-container>
+
+  <!-- Editar Column
+  <ng-container matColumnDef="demo-editar">
+    <th mat-header-cell *matHeaderCellDef>Editar</th>
+    <td mat-cell *matCellDef="let producto">
+       Agrega tu botón de edición aquí 
+      <button (click)="editarProducto(producto)">Editar</button>
+    </td>
+  </ng-container> -->
+
+  <!-- Eliminar Column -->
+  <ng-container matColumnDef="demo-eliminar">
+    <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+    <td mat-cell *matCellDef="let producto">
+      <!-- Agrega tu botón de eliminación aquí -->
+      <button (click)="eliminarItem(producto)">Eliminar</button>
+    </td>
+  </ng-container>
+
+  <!-- Total Column -->
+  <ng-container matColumnDef="demo-total">
+    <th mat-header-cell *matHeaderCellDef>Total</th>
+    <td mat-cell *matCellDef="let producto" colspan="2">{{ '€' + producto.total.toFixed(2) }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let producto; columns: displayedColumns"></tr>
+</table>

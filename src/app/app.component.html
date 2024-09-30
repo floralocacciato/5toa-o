@@ -1,0 +1,48 @@
+<mat-toolbar color="accent">
+  <span routerLink="home">Home </span>  
+  <button mat-icon-button class="icon" aria-label=" icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span routerLink="galeria">Categorias </span>
+  <span>Sobre nosotros </span>
+  <span routerLink="contacto">Contactar  </span>
+  <span  class="example-spacer"></span>
+  
+  <button routerLink="favoritos" mat-icon-button class="favorite-icon" aria-label="icon-button with heart icon">
+    <mat-icon matBadge="{{productoservicio.cantidadProductosFavoritos}}" matBadgeColor="warn">favorite</mat-icon>
+  </button>
+  
+  <button routerLink="carrito" mat-icon-button class="carrito-icon" aria-label="icon-button with icon">
+    <mat-icon matBadge="{{productoservicio.cantItemsCarrito}}" matBadgeColor="warn">add_shopping_cart</mat-icon>
+  </button>
+  
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+<!-- -->
+
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">© 2023 Skater </span>
+  </div>
+</footer>
